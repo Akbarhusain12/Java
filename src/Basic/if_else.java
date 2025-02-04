@@ -1,6 +1,6 @@
 public class if_else {
     public static void main(String[] args) {
-        int a = 35, b = 13, c = 3;
+        int a = 40, b = 13, c = 3;
         if (a>b && a>c){
             System.out.println("A is Greater");
         }
