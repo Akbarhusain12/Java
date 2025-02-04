@@ -64,7 +64,7 @@ public class dog_details {
     }
 
     public static void main(String[] args) {
-        dog_details dog = new dog_details("Buddy", "Golden Retriever", 1500.0, "New York", "John Doe, 1234567890");
+        dog_details dog = new dog_details("John", "Golden Retriever", 15000.0, "New York", "Doe kane, 1234567890");
         dog.displayDetails();
     }
 }
