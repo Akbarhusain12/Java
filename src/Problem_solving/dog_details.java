@@ -1,4 +1,4 @@
-package Oops;
+package Problem_solving;
 
 public class dog_details {
     private String name;
