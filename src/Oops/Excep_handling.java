@@ -3,26 +3,34 @@ package Oops;
 public class Excep_handling {
     public static void main(String[] args) {
         try {
-            int a = 10;
-            int b = 5;
+            // ArithmeticException (division by zero)
+            int div = 10 / 0;
+            System.out.println("Result: " + div);
 
-            int div = a / b;
-            System.out.println("Division is: " + div);
+            // ArrayIndexOutOfBoundsException
+            int[] numbers = {1, 2, 3, 4, 5, 6};
+            System.out.println("My Number: " + numbers[10]);
 
-            int[] numbers = {10, 20, 30, 40, 50};
+            // StringIndexOutOfBoundsException
+            String Name = "Akbar";
+            System.out.println("My Character at - " + Name.charAt(20));
 
-            System.out.println("Array elements:");
-            for (int num : numbers) {
-                System.out.println(num);
-            }
+            // NullPointerException
+            String a = null;
+            System.out.println(a.length());
 
         } catch (ArithmeticException e) {
-            throw new RuntimeException("An error occurred: Division by zero", e);
-        }catch(ArrayIndexOutOfBoundsException A){
-            System.out.println("Array index is out of bounds.");
-        }
-        finally {
-            System.out.println("Finally block executed.");
+            System.out.println("Error: Division by zero is not allowed.");
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Error: Array index is out of bounds.");
+        } catch (StringIndexOutOfBoundsException e) {
+            System.out.println("Error: String index is out of bounds.");
+        } catch (NullPointerException e) {
+            System.out.println("Error: Null reference encountered.");
+        } catch (Exception e) {
+            System.out.println("General Error: " + e.getMessage());
+        } finally {
+            System.out.println("Execution completed.");
         }
     }
 }
