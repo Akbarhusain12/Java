@@ -1,3 +1,5 @@
+package Data_structure;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,5 +20,7 @@ public class List_Data_type {
         System.out.println("After Adding element- " + fruits);
         System.out.println("Removed element - "+fruits.remove(3));
         System.out.println("After Removing element- " + fruits);
+
+        System.out.println("Element using index - "+ fruits.get(4));
     }
 }
