@@ -15,10 +15,20 @@ class Dog extends Animal{
     }
 }
 
+class Cat extends Animal{
+    @Override
+    public void sound(){
+        System.out.println("Meow Meow");
+    }
+}
+
 
 public class Dynamic_binding {
     public static void main(String[] args) {
-        Dog d = new Dog();
+        Animal d = new Dog();
+        d.sound();
+
+        d = new Cat();
         d.sound();
     }
 }
